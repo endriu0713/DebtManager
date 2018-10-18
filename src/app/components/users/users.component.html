@@ -1,0 +1,19 @@
+<div class="card">
+  <div class="card-title">
+    <ul *ngFor="let user of users">
+      <li>{{user.username}}</li>
+      <ul *ngFor="let friend of user.friendsArray">
+        <li>{{friend.username}}</li>
+      </ul>
+    </ul>
+    <hr> User: {{ user.username }}
+  </div>
+
+  <div class="card" *ngFor="let user of users">
+    <div class="card-header">
+      {{ user.username }}
+    </div>
+    <ul class="list-group list-group-flush" *ngFor="let friend of user.friendsArray">
+      <li class="list-group-item">{{ friend.username }}</li>
+    </ul>
+  </div>

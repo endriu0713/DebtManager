@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-md-8 mx-auto">
+    <div class="card">
+      <div class="card-body">
+        <h1 class="text-center pb-4 pt-3">
+          <span class="text-primary">
+            <i class="fa fa-lock"></i> Debtor</span> Register
+        </h1>
+        <form>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" name="email" placeholder="Email address" required>
+          </div>
+          <div class="form-group">
+            <label for="username">Unique username</label>
+            <input type="text" class="form-control" name="username" placeholder="The username will be your identificator" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" name="password" placeholder="Use at least one numeral, one special sign, and six characters" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+          </div>
+          <div class="form-group">
+            <label for="password">Password confirm</label>
+            <input type="password" class="form-control" name="password2" placeholder="Please re-type the password" required>
+          </div>
+          <div class="row">
+            <div class="form-group col-md-6 col-sm-12">
+              <label for="firstName">First Name</label>
+              <input type="text" class="form-control" name="firstName" required>
+            </div>
+            <div class="form-group col-md-6 col-sm-12">
+              <label for="lastName">Last Name</label>
+              <input type="text" class="form-control" name="lastName" required>
+            </div>
+          </div>
+          <br>
+          <input type="submit" value="Register" class="btn btn-primary btn-block">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

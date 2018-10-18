@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="col-md-8 mx-auto">
+    <div class="card">
+      <div class="card-body">
+        <h1 class="text-center pb-4 pt-3">
+          <span class="text-primary">
+            <i class="fa fa-lock"></i> Debtor</span> Login
+        </h1>
+        <form #formLogin="ngForm" (submit)="onLogin()">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" #email="ngModel" class="form-control" name="email" [(ngModel)]="loginUser.email" placeholder="Email address" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+            <div *ngIf="email.touched && email.invalid" class="danger">Email required</div>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" name="password" [ngClass]="" [(ngModel)]="loginUser.password" #password="ngModel" placeholder="Own password" required>
+            <div *ngIf="password.touched && password.invalid" class="danger">Password required</div>
+          </div>
+          <br>
+          <input [disabled]="!formLogin.valid" type="submit" value="Login" class="btn btn-primary btn-block">
+          <div *ngIf="error" class="text-center">
+            <br>
+            <h5 class="danger">{{ error }}</h5>
+          </div>
+        </form>
+        <hr>
+        <div class="text-center">
+          <a routerLink="/register">Don't you have the account yet? Click here to register.</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
